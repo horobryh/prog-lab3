@@ -2,16 +2,16 @@ public class People extends Animal implements Talkable, Thinkable {
     Condition condition;
 
     public void talk(Object obj) {
-        System.out.println(this.toString() + " talk with " + obj.toString());
+        System.out.println(this + " talk with " + obj.toString());
     }
 
     public void go(Object obj) {
-        System.out.println(this.toString() + " go to " + obj.toString());
+        System.out.println(this + " go to " + obj.toString());
     }
 
     @Override
     public void think() {
-        System.out.println(this.toString() + " is thinking.");
+        System.out.println(this + " is thinking.");
     }
 
     public People(String name, Condition condition) {

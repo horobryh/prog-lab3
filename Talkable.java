@@ -1,5 +1,3 @@
 public interface Talkable {
-    default void talk() {
-        System.out.println("Разговаривать.");
-    }
+    void talk(Object obj);
 }

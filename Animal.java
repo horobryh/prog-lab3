@@ -2,9 +2,7 @@ public abstract class Animal implements Runnable, Sleepable {
     String name;
 
     @Override
-    public void go() {
-        System.out.println(this.toString() + " go.");
-    }
+    public abstract void go(Object obj);
 
     @Override
     public void sleep() {
@@ -12,9 +10,7 @@ public abstract class Animal implements Runnable, Sleepable {
     }
 
     @Override
-    public String toString() {
-        return this.name + " (Animal)";
-    }
+    public abstract String toString();
 
     public String getName() {
         return this.name;
