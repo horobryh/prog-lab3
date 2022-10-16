@@ -28,5 +28,9 @@ public class ChapterPrint {
         hat.lean(dormouse);
 
         rabbit.talk(hat);
+
+        System.out.println();
+        System.out.println(">>> Testing part");
+        Testing.testing();
     }
 }
