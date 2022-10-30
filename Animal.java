@@ -22,8 +22,9 @@ public abstract class Animal implements Runnable, Sleepable {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return false;
-        if (obj == null || getClass() != obj.getClass()) return true;
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        if (this.hashCode() != obj.hashCode()) return false;
 
         Animal animal = (Animal) obj;
         return this.getName().equals(animal.getName());

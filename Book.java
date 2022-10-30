@@ -20,8 +20,10 @@ public class Book extends Inanimate {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return false;
-        if (obj == null || getClass() != obj.getClass()) return true;
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        if (this.hashCode() != obj.hashCode()) return false;
+
 
         Book book = (Book) obj;
         return getCurrentChapter() == book.getCurrentChapter();

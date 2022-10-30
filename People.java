@@ -30,8 +30,9 @@ public class People extends Animal implements Talkable, Thinkable {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return false;
-        if (obj == null || getClass() != obj.getClass()) return true;
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        if (this.hashCode() != obj.hashCode()) return false;
 
         People people = (People) obj;
         return condition == people.getCondition() && name.equals(people.getName());
